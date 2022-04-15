@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import MouseOverUseRef from './MouseOverUseRef'
 
 const InputElement = () => {
   const [ inputText, setInputText ] = useState('')
@@ -19,10 +20,11 @@ const InputElement = () => {
       />
       <hr/><br/>
       <ul>
-        {historyList.map(item =>
-          <div>{item}</div>
+        {historyList.map((item, idx) =>
+          <div key={idx}>{item}</div>
         )}
       </ul>
+      {/* <MouseOverUseRef /> */}
     </>
   )
 }

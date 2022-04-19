@@ -24,7 +24,6 @@ const InputElement = () => {
           <div key={idx}>{item}</div>
         )}
       </ul>
-      {/* <MouseOverUseRef /> */}
     </>
   )
 }

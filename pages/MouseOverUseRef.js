@@ -5,13 +5,13 @@ const MouseoverUseRef = () => {
 
   return (
     <>
-      <ToggleMouseOver 
-        primaryImg='/static/speakers/bw/Speaker-187.jpg'
-        secondaryImg='/static/speakers/Speaker-187.jpg'
+      <ToggleMouseOver
+        primaryImg='/static/speakers/bw/Speaker-6548.jpg'
+        secondaryImg='/static/speakers/Speaker-6548.jpg'
       />
-      <ToggleMouseOver 
-        primaryImg='/static/speakers/bw/Speaker-10803.jpg'
-        secondaryImg='/static/speakers/Speaker-10803.jpg'
+      <ToggleMouseOver
+        primaryImg='/static/speakers/bw/Speaker-41808.jpg'
+        secondaryImg='/static/speakers/Speaker-41808.jpg'
       />
     </>
   )

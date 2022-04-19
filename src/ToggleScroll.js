@@ -4,15 +4,6 @@ const ToggleScroll = ({ primaryImg, secondaryImg }) => {
   const [inView, setInView] = useState(false)
   const imageRef = useRef(null)
 
-  // listen to scroll event when component mounts and run handling f-n
-  // remove event listener when unmounted
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
   // check if current img is in window view
   const isInView = () => {
     const windowRect = imageRef.current.getBoundingClientRect()
@@ -22,10 +13,23 @@ const ToggleScroll = ({ primaryImg, secondaryImg }) => {
   // update inView state of each img
   const handleScroll = () => setInView(isInView())
 
+  useEffect(() => {
+    // set images in view colored before scrolling
+    setInView(isInView())
+    // listen to scroll event when component mounts and run handling f-n
+    window.addEventListener('scroll', handleScroll)
+    // remove event listener when unmounted
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      setIsLoading(true)
+    }
+  }, [])
+
   return (
     <img
       src={inView ? secondaryImg : primaryImg}
       ref={imageRef}
+      height='360'
     />
   )
 }

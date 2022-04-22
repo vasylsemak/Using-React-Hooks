@@ -1,8 +1,9 @@
 import { useRef, useState, useEffect } from 'react'
 
 const ToggleScroll = ({ primaryImg, secondaryImg }) => {
-  const [inView, setInView] = useState(false)
   const imageRef = useRef(null)
+  const [inView, setInView] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   // check if current img is in window view
   const isInView = () => {
@@ -14,6 +15,7 @@ const ToggleScroll = ({ primaryImg, secondaryImg }) => {
   const handleScroll = () => setInView(isInView())
 
   useEffect(() => {
+    setIsLoading(false)
     // set images in view colored before scrolling
     setInView(isInView())
     // listen to scroll event when component mounts and run handling f-n
@@ -27,7 +29,11 @@ const ToggleScroll = ({ primaryImg, secondaryImg }) => {
 
   return (
     <img
-      src={inView ? secondaryImg : primaryImg}
+      src={
+        isLoading ? 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+        : inView ? secondaryImg
+        : primaryImg
+      }
       ref={imageRef}
       height='340'
     />

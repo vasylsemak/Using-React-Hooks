@@ -1,15 +1,15 @@
 import React from 'react'
-import ToggleMouseOver from '../src/ToggleMouseOver'
+// import ToggleMouseOver from '../src/ToggleMouseOver'
+import ToggleMouseOverClass from '../src/ToggleMouseOverClass'
 
 const MouseoverUseRef = () => {
-
   return (
     <>
-      <ToggleMouseOver
+      <ToggleMouseOverClass
         primaryImg='/static/speakers/bw/Speaker-6548.jpg'
         secondaryImg='/static/speakers/Speaker-6548.jpg'
       />
-      <ToggleMouseOver
+      <ToggleMouseOverClass
         primaryImg='/static/speakers/bw/Speaker-41808.jpg'
         secondaryImg='/static/speakers/Speaker-41808.jpg'
       />

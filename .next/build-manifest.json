@@ -15,10 +15,10 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/ScrollUseEffect": [
+    "/MouseOverUseRef": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ScrollUseEffect.js"
+      "static/chunks/pages/MouseOverUseRef.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

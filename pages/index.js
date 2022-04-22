@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import MouseOverUseRef from './MouseOverUseRef'
 
 const InputElement = () => {
   const [ inputText, setInputText ] = useState('')

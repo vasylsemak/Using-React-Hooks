@@ -29,7 +29,7 @@ const ToggleScroll = ({ primaryImg, secondaryImg }) => {
     <img
       src={inView ? secondaryImg : primaryImg}
       ref={imageRef}
-      height='360'
+      height='340'
     />
   )
 }
